@@ -2,6 +2,12 @@ typical create-react-app stuff bb
 
 just navigate to the project folder and type npm start in console bb
 
+this app was created under the influence of HANA ROOM 
+
+bb
+
+https://www.youtube.com/watch?v=Ms9nt6dHfvE
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
