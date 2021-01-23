@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+import logo from '../assets/logo.svg';
 import './App.css';
 
 function App() {
 
-  const wardString = "<f'n ward bb>";
+  const WardString = "<f'n ward bb>";
   return (
     <div className="App">
       <header className="App-header">
@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {wardString}
+          {WardString}
         </a>
       </header>
     </div>

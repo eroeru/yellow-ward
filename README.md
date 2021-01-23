@@ -1,10 +1,8 @@
-typical create-react-app stuff bb
+typical create-react-app stuff:
 
-just navigate to the project folder and type npm start in console bb
+just navigate to the project folder and type npm start in console
 
-this app was created under the influence of HANA ROOM 
-
-bb
+this app was created under the influence of HANA ROOM:
 
 https://www.youtube.com/watch?v=Ms9nt6dHfvE
 
