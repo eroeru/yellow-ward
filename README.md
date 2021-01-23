@@ -1,7 +1,7 @@
 typical create-react-app stuff:
 just navigate to the project folder and type "npm start" in console
 
-# Sum moar create-react-app stuff
+# Basic create-react-app stuff left in just-in-case
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
