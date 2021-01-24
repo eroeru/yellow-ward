@@ -1,24 +1,21 @@
-import logo from '../assets/logo.svg';
-import './App.css';
+import Hero from "./Hero";
+import Navbar from "./Navbar";
+import Background from "./layouts/Background";
+import Services from "./Services";
+import Logo from "./subcomponents/Logo";
 
-function App() {
-
-  const WardString = "<f'n ward bb>";
+const App = () => {
+  const naviLeft = <Logo />;
+  const naviRight = <input></input>;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {WardString}
-        </a>
-      </header>
+    <div>
+      <Navbar left={naviLeft} right={naviRight} />
+      <Background>
+        <Hero />
+        <Services />
+      </Background>
     </div>
   );
-}
+};
 
 export default App;
