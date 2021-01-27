@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from "./styles/colors";
 
 const Services = () => {
   return (
@@ -10,11 +11,11 @@ const Services = () => {
 };
 
 const Container = styled.div`
-  background: rgba(247, 224, 51, 0.4);
+  background: ${colors.secondary_yellow};
   font-size: 4rem;
   padding-top: 7rem;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export default Services;

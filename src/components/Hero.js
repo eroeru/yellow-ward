@@ -1,13 +1,22 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import HeroPic from "../assets/hero.png";
+import Button from "./subcomponents/Button";
+import { colors } from "./styles/colors";
 
 const Hero = () => {
+  const hireText = "<hire us>";
+  const seeMoreText = "<see more of our work>";
   return (
     <Container>
       <HeroSection>
         <TextNButtons>
-          <input></input>
+          <Text>Web design, development and more.</Text>
+          <Text secondary>
+            We make very basic projects, so you don't have to.
+          </Text>
+          <Button primary>{hireText}</Button>
+          <Button secondary>{seeMoreText}</Button>
         </TextNButtons>{" "}
         <HeroPicPlace src={HeroPic} />
       </HeroSection>
@@ -15,7 +24,25 @@ const Hero = () => {
   );
 };
 
+const Text = styled.div`
+  font-family: Roboto Mono;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+  font-style: normal;
+  line-height: 2.9375rem;
+  letter-spacing: 0em;
+  text-align: left;
+
+  ${({ secondary }) =>
+    secondary &&
+    css`
+      font-size: 1.4375rem;
+    `}
+`;
+
 const TextNButtons = styled.div`
+  color: ${colors.secondary_grey};
   width: 80vw;
 `;
 
@@ -25,20 +52,17 @@ const HeroPicPlace = styled.img`
 
 const HeroSection = styled.div`
   display: flex;
-  width: 70vw;
+  width: 73vw;
   height: 50vh;
   align-items: center;
   flex-direction: row;
   justify-content: center;
 `;
 
-// TODO: the fixed width and height should be made %%
-
 const Container = styled.div`
   display: flex;
   background: #3f3f3f;
   font-size: 4rem;
-  padding-top: 7rem;
   width: 100vw;
   height: 100vh;
   align-items: center;

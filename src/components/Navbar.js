@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { colors } from "./styles/colors";
 
 const Navbar = ({ left, right }) => {
   return (
@@ -25,10 +26,11 @@ const Container = styled.div`
 const Flex = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 2rem 2rem;
+  padding: 4vh 10vw 0vh 7vw;
   align-items: center;
   flex-direction: row;
-  background-color: transparent;
+  background: transparent;
+  color: ${colors.secondary_grey};
 `;
 
 export default Navbar;
