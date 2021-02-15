@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import HeroPic from "../assets/hero.png";
 import Button from "./subcomponents/Button";
-import FlexScreenCentered from "./layouts/FlexScreenCentered";
+import FlexScreen from "./layouts/FlexScreen";
 import { colors } from "./styles/colors";
 
 const Hero = () => {
@@ -60,8 +60,10 @@ const HeroSection = styled.div`
   justify-content: center;
 `;
 
-const Container = styled(FlexScreenCentered)`
+const Container = styled(FlexScreen)`
   background: ${colors.primary_grey};
+  align-items: center;
+  justify-content: center;
 `;
 
 export default Hero;

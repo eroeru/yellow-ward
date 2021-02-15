@@ -26,10 +26,12 @@ const Container = styled.div`
 const Flex = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 4vh 10vw 0vh 7vw;
+  padding: 1vh 10vw 1vh 7vw;
+  border-radius: 1%;
   align-items: center;
   flex-direction: row;
-  background: transparent;
+  background: ${colors.primary_grey};
+  opacity: 0.7;
   color: ${colors.secondary_grey};
 `;
 

@@ -10,10 +10,10 @@ const Header = ({ headerText }) => {
 };
 
 const Container = styled.div`
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
+  display: flex;
+  padding-top: 14vh;
+  padding-left: 4vw;
+  font-size: 2.5rem;
 `;
 
 export default Header;
