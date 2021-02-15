@@ -12,11 +12,11 @@ export default styled.button`
   font-size: 1.1875rem;
   padding: 1rem 1rem;
   transition: 0.2s border;
+  transition: 0.56s;
   min-width: 1rem;
   letter-spacing: 1px;
   box-sizing: border-box;
   pointer-events: all;
-  transition: 0.56s;
 
   &:focus,
   &:hover {
