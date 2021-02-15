@@ -2,22 +2,39 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "./styles/colors";
 import Card from "./subcomponents/Card";
+import Header from "./subcomponents/Header";
 
 const Services = () => {
+  const firstCardImage = "image1";
+  const firstCardTitle = "title1";
+  const firstCardList = "a, b, c";
 
-  const cardImage = "image";
-  const cardTitle = "title";
-  const cardList = "a, b, c";
+  const secondCardImage = "image2";
+  const secondCardTitle = "title2";
+  const secondCardList = "a, b, c";
+
+  const thirdCardImage = "image3";
+  const thirdCardTitle = "title3";
+  const thirdCardList = "a, b, c";
 
   return (
     <Container>
+      <Header left={"services"} />
       <Card
-        upper={cardImage}
-        middle={cardTitle}
-        lower={cardList}
+        upper={firstCardImage}
+        middle={firstCardTitle}
+        lower={firstCardList}
       />
-      <Card />
-      <Card />
+      <Card
+        upper={secondCardImage}
+        middle={secondCardTitle}
+        lower={secondCardList}
+      />
+      <Card
+        upper={thirdCardImage}
+        middle={thirdCardTitle}
+        lower={thirdCardList}
+      />
     </Container>
   );
 };

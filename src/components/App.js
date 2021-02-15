@@ -4,6 +4,7 @@ import Background from "./layouts/Background";
 import Services from "./Services";
 import Logo from "./subcomponents/Logo";
 import Button from "./subcomponents/Button";
+import Portfolio from "./Portfolio";
 
 const App = () => {
   const naviLeft = <Logo />;
@@ -20,6 +21,7 @@ const App = () => {
       <Navbar left={naviLeft} right={naviRight} />
       <Hero />
       <Services />
+      <Portfolio />
     </Background>
   );
 };

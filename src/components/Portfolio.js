@@ -1,18 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { colors } from "./styles/colors";
-import Card from "./subcomponents/Card";
+import React from "react";
+import FlexScreenCentered from "./layouts/FlexScreenCentered";
+import Header from "./subcomponents/Header";
 
 const Portfolio = () => {
-  return (
-    <Container>
-    </Container>
-  );
+  return <FlexScreenCentered portfolio>
+    <Header />
+  </FlexScreenCentered>;
 };
-
-const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
-`;
 
 export default Portfolio;
