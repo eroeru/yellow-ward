@@ -10,6 +10,7 @@ const Header = ({ headerText }) => {
 };
 
 const Container = styled.div`
+  position: absolute;
   display: flex;
   padding-top: 14vh;
   padding-left: 4vw;

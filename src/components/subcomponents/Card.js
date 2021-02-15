@@ -17,9 +17,10 @@ const Container = styled.div`
   font-family: "Roboto Mono", monospace;
   font-size: 40px;
   text-align: center;
-  width: 18vw;
+  width: 16vw;
   height: 40vh;
   flex-direction: column;
+  margin: 4vw;
 `;
 
 export default Card;
