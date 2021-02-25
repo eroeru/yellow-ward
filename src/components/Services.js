@@ -6,37 +6,17 @@ import Card from "./subcomponents/Card";
 import Header from "./subcomponents/Header";
 
 const Services = () => {
-  const firstCardImage = "image1";
-  const firstCardTitle = "title1";
-  const firstCardList = "a, b, c";
-
-  const secondCardImage = "image2";
-  const secondCardTitle = "title2";
-  const secondCardList = "a, b, c";
-
-  const thirdCardImage = "image3";
-  const thirdCardTitle = "title3";
-  const thirdCardList = "a, b, c";
+  const firstCardData = { upper: "image1", middle: "title1", lower: "a, b, c" };
+  const secondCardData = { upper: "image2", middle: "title2", lower: "a, b, c" };
+  const thirdCardData = { upper: "image3", middle: "title3", lower: "a, b, c" };
 
   return (
     <ServicesScreen>
       <Header headerText={"services"} />
       <Container>
-        <Card
-          upper={firstCardImage}
-          middle={firstCardTitle}
-          lower={firstCardList}
-        />
-        <Card
-          upper={secondCardImage}
-          middle={secondCardTitle}
-          lower={secondCardList}
-        />
-        <Card
-          upper={thirdCardImage}
-          middle={thirdCardTitle}
-          lower={thirdCardList}
-        />
+        <Card cardData={firstCardData} />
+        <Card cardData={secondCardData} />
+        <Card cardData={thirdCardData} />
       </Container>
     </ServicesScreen>
   );
@@ -56,7 +36,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   font-size: 4rem;
-  padding-top: 1vh;;
+  padding-top: 1vh; ;
 `;
 
 export default Services;

@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../styles/colors";
 
-const Card = ({ upper, middle, lower }) => {
+const Card = ({ cardData }) => {
+
   return (
     <Container>
-      <div>{upper}</div>
-      <div>{middle}</div>
-      <div>{lower}</div>
+      <div>{cardData.upper}</div>
+      <div>{cardData.middle}</div>
+      <div>{cardData.lower}</div>
     </Container>
   );
 };
