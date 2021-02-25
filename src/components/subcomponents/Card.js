@@ -22,6 +22,7 @@ const Container = styled.div`
   height: 40vh;
   flex-direction: column;
   margin: 4vw;
+  border-radius: 1rem;
 `;
 
 export default Card;

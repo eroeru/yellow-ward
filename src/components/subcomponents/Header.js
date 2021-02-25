@@ -15,6 +15,7 @@ const Container = styled.div`
   padding-top: 14vh;
   padding-left: 4vw;
   font-size: 2.5rem;
+  z-index: 800;
 `;
 
 export default Header;
