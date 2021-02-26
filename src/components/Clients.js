@@ -2,38 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import FlexScreen from "./layouts/FlexScreen";
 import { colors } from "./styles/colors";
-import Badge from "./subcomponents/Badge";
 import Header from "./subcomponents/Header";
+import TransferPic from "../assets/tw.png";
 
-const Services = () => {
-
-  const aCardData = {upper: "image1", middle: "title2", lower: "a,b,c"};
-
-//   const bCardImage = "image2";
-//   const bCardTitle = "title2";
-//   const bCardList = "a, b, c";
-
-//   const cCardImage = "image3";
-//   const cCardTitle = "title3";
-//   const cCardList = "a, b, c";
-
+const Clients = () => {
   return (
     <ServicesScreen>
-      <Header headerText={"services"} />
+      <Header headerText={"clients"} secondary />
       <Container>
-        <Card
-          cardData={aCardData}
-        />
-        <Card
-        //   upper={bCardImage}
-        //   middle={bCardTitle}
-        //   lower={bCardList}
-        />
-        <Card
-        //   upper={cCardImage}
-        //   middle={cCardTitle}
-        //   lower={cCardList}
-        />
+        <Badge src={TransferPic} />
       </Container>
     </ServicesScreen>
   );
@@ -42,7 +19,7 @@ const Services = () => {
 const ServicesScreen = styled(FlexScreen)`
   width: 100vw;
   height: 50vh;
-  background: ${colors.bary_yellow};
+  background: ${colors.primary_grey};
 `;
 
 const Container = styled.div`
@@ -53,7 +30,12 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   font-size: 4rem;
-  padding-top: 1vh;;
+  padding-top: 1vh; ;
 `;
 
-export default Services;
+const Badge = styled.img`
+  width: 10vw;
+  cursor: pointer;
+`;
+
+export default Clients;

@@ -5,6 +5,10 @@ import Services from "./Services";
 import Logo from "./subcomponents/Logo";
 import Button from "./subcomponents/Button";
 import Portfolio from "./Portfolio";
+import Clients from "./Clients";
+import About from "./About";
+import Testimonials from "./Testimonials";
+import Contact from "./Contact";
 
 const App = () => {
   const naviLeft = <Logo />;
@@ -22,6 +26,10 @@ const App = () => {
       <Hero />
       <Services />
       <Portfolio />
+      <Clients />
+      <About />
+      <Testimonials />
+      <Contact />
     </Background>
   );
 };

@@ -17,6 +17,7 @@ const Container = styled.div`
   background: ${colors.primary_grey};
   font-family: "Roboto Mono", monospace;
   font-size: 40px;
+  color: ${colors.secondary_grey};
   text-align: center;
   width: 16vw;
   height: 40vh;
