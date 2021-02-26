@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 import { colors } from "../styles/colors";
 
-const Header = ({ headerText }) => {
+const Header = ({ headerText, secondary }) => {
   return (
-    <Container>
+    <Container secondary={secondary}>
       <div>{headerText}</div>
     </Container>
   );
@@ -18,10 +18,9 @@ const Container = styled.div`
   z-index: 800;
 
   ${({ secondary }) =>
-  // TODO: MAKE THIS WORK
   secondary &&
   css`
-    color: red;
+    color: ${colors.secondary_grey};
   `}
 `;
 
