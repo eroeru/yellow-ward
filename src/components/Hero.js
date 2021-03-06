@@ -12,10 +12,10 @@ const Hero = () => {
     <Container>
       <HeroSection>
         <TextNButtons>
-          <Text>Web design, development and more.</Text>
-          <Text secondary>
+          <HeroText>Web design, development and more.</HeroText>
+          <HeroText secondary>
             We make very basic projects, so you don't have to.
-          </Text>
+          </HeroText>
           <Button primary>{hireText}</Button>
           <Button secondary>{seeMoreText}</Button>
         </TextNButtons>
@@ -25,7 +25,7 @@ const Hero = () => {
   );
 };
 
-const Text = styled.div`
+const HeroText = styled.div`
   font-family: Roboto Mono;
   font-weight: 700;
   font-size: 2.5rem;

@@ -13,12 +13,26 @@ const About = () => {
   return (
     <AboutScreen>
       <Header headerText={"about us"} />
+      <AboutText secondary>
+            {aboutText}
+          </AboutText>
     </AboutScreen>
   );
 };
 
 const AboutScreen = styled(FlexScreen)`
   background: ${colors.secondary_grey};
+`;
+
+const AboutText = styled.div`
+  font-family: Roboto Mono;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0rem;
+  font-style: normal;
+  line-height: 2.9375rem;
+  letter-spacing: 0em;
+  text-align: left;
 `;
 
 export default About;
