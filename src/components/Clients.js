@@ -11,6 +11,8 @@ const Clients = () => {
       <Header headerText={"clients"} secondary />
       <Container>
         <Badge src={TransferPic} />
+        <Badge src={TransferPic} />
+        <Badge src={TransferPic} />
       </Container>
     </ServicesScreen>
   );
@@ -36,6 +38,7 @@ const Container = styled.div`
 const Badge = styled.img`
   width: 10vw;
   cursor: pointer;
+  padding: 2rem;
 `;
 
 export default Clients;

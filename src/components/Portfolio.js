@@ -5,14 +5,17 @@ import PortfolioPic from "../assets/portfolio_placeholder.png";
 import YellowPic from "../assets/yw1.png";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {Navigation, Pagination} from "swiper";
 import "swiper/swiper.scss";
+
+SwiperCore.use([Navigation, Pagination]);
 
 const Portfolio = () => {
   const headerText = "portfolio";
   return (
     <FlexScreen>
       <Header headerText={headerText} />
-      <Swiper loop="true">
+      <Swiper loop navigation pagination={{ clickable: true }}>
         <SwiperSlide>
           <FirstWork />
         </SwiperSlide>

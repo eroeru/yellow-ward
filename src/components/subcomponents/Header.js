@@ -18,10 +18,10 @@ const Container = styled.div`
   z-index: 800;
 
   ${({ secondary }) =>
-  secondary &&
-  css`
-    color: ${colors.secondary_grey};
-  `}
+    secondary &&
+    css`
+      color: ${colors.secondary_grey};
+    `}
 `;
 
 export default Header;
