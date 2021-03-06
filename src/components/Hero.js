@@ -18,7 +18,7 @@ const Hero = () => {
           </Text>
           <Button primary>{hireText}</Button>
           <Button secondary>{seeMoreText}</Button>
-        </TextNButtons>{" "}
+        </TextNButtons>
         <HeroPicPlace src={HeroPic} />
       </HeroSection>
     </Container>
