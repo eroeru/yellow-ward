@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { colors } from "../styles/colors";
 
-const Card = ({ cardData }) => {
+const Card = ({ cardData = {} }) => {
 
   return (
     <Container>

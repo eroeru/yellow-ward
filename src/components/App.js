@@ -1,6 +1,5 @@
 import Hero from "./Hero";
 import Navbar from "./Navbar";
-import Background from "./layouts/Background";
 import Services from "./Services";
 import Logo from "./subcomponents/Logo";
 import Button from "./subcomponents/Button";
@@ -9,6 +8,7 @@ import Clients from "./Clients";
 import About from "./About";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
+import React from "react";
 
 const App = () => {
   const naviLeft = <Logo />;
@@ -21,7 +21,7 @@ const App = () => {
     </div>
   );
   return (
-    <Background>
+    <React.Fragment>
       <Navbar left={naviLeft} right={naviRight} />
       <Hero />
       <Services />
@@ -30,7 +30,7 @@ const App = () => {
       <About />
       <Testimonials />
       <Contact />
-    </Background>
+    </React.Fragment>
   );
 };
 
