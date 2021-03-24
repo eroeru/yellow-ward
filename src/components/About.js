@@ -9,33 +9,29 @@ const About = () => {
     "We design and build unique website and apps for your company, \
     so you dont’t have to. Our principles are to create a simple \
     but unique experience for you and for your users.";
-    
+
   return (
     <AboutScreen>
-      <Header headerText={"about us"} />
-      <AboutText secondary>
-            {aboutText}
-          </AboutText>
+      <Header relative headerText={"about us"} />
+      <AboutText secondary>{aboutText}</AboutText>
     </AboutScreen>
   );
 };
 
 const AboutScreen = styled(FlexScreen)`
-  background: ${colors.secondary_grey};
+  flex-direction: column;
 `;
-// Todo: check rem conversions. 
+
+// Todo: check rem conversions.
 const AboutText = styled.div`
+  padding-left: 10rem;
+  padding-top: 2rem;
   font-family: Roboto Mono;
   font-weight: normal;
   font-size: 1.188rem;
-  margin-top: 3.75rem; 
-  margin-bottom: 0rem;
-  margin-left: 13.6rem;
-  margin-right: 13.6rem;
   font-style: normal;
   line-height: 1.5rem;
   letter-spacing: 0em;
-  text-align: left;
 `;
 
 export default About;

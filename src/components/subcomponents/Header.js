@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 import { colors } from "../styles/colors";
 
-const Header = ({ headerText, secondary }) => {
+const Header = ({ headerText, secondary, relative }) => {
   return (
-    <Container secondary={secondary}>
+    <Container secondary={secondary} relative={relative}>
       <div>{headerText}</div>
     </Container>
   );
@@ -21,6 +21,12 @@ const Container = styled.div`
     secondary &&
     css`
       color: ${colors.secondary_grey};
+    `}
+
+  ${({ relative }) =>
+    relative &&
+    css`
+      position: relative;
     `}
 `;
 
