@@ -2,9 +2,9 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { colors } from "./styles/colors";
 import Profile from "./subcomponents/Profile";
-import ProfilePicM1 from "../assets/profile_pic_m1.svg";
-import ProfilePicM2 from "../assets/profile_pic_m2.svg";
-import ProfilePicF1 from "../assets/profile_pic_f1.svg";
+import profilePicM1 from "../assets/profile_pic_m1.svg";
+import profilePicM2 from "../assets/profile_pic_m2.svg";
+import profilePicF1 from "../assets/profile_pic_f1.svg";
 import FlexScreen from "./layouts/FlexScreen";
 import Header from "./subcomponents/Header";
 
@@ -17,13 +17,19 @@ const About = () => {
   return (
     <AboutScreen>
       <Header relative headerText={"about us"} />
-      <AboutText secondary>{aboutText}</AboutText>
-      <Profile profilePic={ProfilePicM1}> name = { "Eero" } </Profile>
+      <AboutText secondary> {aboutText} </AboutText>
+      <ProfileContainer>
+        <Profile profilePic={profilePicM1} profileName={"Eero"} />
+        <Profile profilePic={profilePicM2} profileName={"Mark"} />
+        <Profile profilePic={profilePicF1} profileName={"Zsófi"} />
+      </ProfileContainer>
     </AboutScreen>
   );
 };
 
-{ /* A commenty comment */}
+{
+  /* A commenty comment */
+}
 
 const AboutScreen = styled(FlexScreen)`
   flex-direction: column;
@@ -43,8 +49,7 @@ const AboutText = styled.div`
 
 const ProfileContainer = styled.div`
   display: flex;
+  flex: 1 1 0px;
 `;
-
-const ProfileImg = styled.img``;
 
 export default About;

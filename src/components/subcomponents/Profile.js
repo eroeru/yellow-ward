@@ -1,17 +1,18 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import { colors } from "../styles/colors";
 
-const Profile = ({ profilePic, name}) => {
-  return (
+
+const Profile = props => (
     <FlexContainer>
-      <ProfileImg src = {profilePic}> </ProfileImg>
-      <ProfileNameText>{name}</ProfileNameText>
+      <ProfileImg src = {props.profilePic} />
+      <ProfileNameText> {props.profileName} </ProfileNameText>
     </FlexContainer >
   );
-};
 
 const FlexContainer = styled.div`
 display: flex;
+flex-direction: column;
 `;
 
 const ProfileImg = styled.img`
