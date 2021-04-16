@@ -31,8 +31,11 @@ const About = () => {
   /* A commenty comment */
 }
 
-const AboutScreen = styled(FlexScreen)`
+const AboutScreen = styled.div`
   flex-direction: column;
+  display: flex;
+  font-size: 4rem;
+  width: 100vw;
 `;
 
 // Todo: check rem conversions.

@@ -19,7 +19,10 @@ const FlexContainer = styled.div`
 
 const ProfileImg = styled.img`
   width: 345px;
-  height: 345px;
+  min-width: 230px;
+  max-width: 100%;
+  min-height: 60%;
+  max-height: 100%;
 `;
 
 const ProfileNameText = styled.div`
@@ -30,6 +33,7 @@ const ProfileNameText = styled.div`
   font-style: normal;
   line-height: 1.5rem;
   letter-spacing: 0em;
+  max-width: 100%;
 `;
 
 export default Profile;
