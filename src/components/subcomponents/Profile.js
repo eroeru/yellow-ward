@@ -2,24 +2,27 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { colors } from "../styles/colors";
 
-
-const Profile = props => (
-    <FlexContainer>
-      <ProfileImg src = {props.profilePic} />
-      <ProfileNameText> {props.profileName} </ProfileNameText>
-    </FlexContainer >
-  );
+const Profile = (props) => (
+  <FlexContainer>
+    <ProfileImg src={props.profilePic} />
+    <ProfileNameText> {props.profileName} </ProfileNameText>
+  </FlexContainer>
+);
 
 const FlexContainer = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  vertical-align: top;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 `;
 
 const ProfileImg = styled.img`
+  width: 345px;
+  height: 345px;
 `;
 
 const ProfileNameText = styled.div`
-  padding-left: 10rem;
   padding-top: 2rem;
   font-family: Roboto Mono;
   font-weight: normal;

@@ -49,7 +49,7 @@ const AboutText = styled.div`
 
 const ProfileContainer = styled.div`
   display: flex;
-  flex: 1 1 0px;
+  justify-content: space-evenly;
 `;
 
 export default About;
