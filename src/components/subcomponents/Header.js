@@ -13,7 +13,7 @@ const Container = styled.div`
   position: absolute;
   display: flex;
   padding-top: 14vh;
-  padding-left: 4vw;
+  padding-left: 5vw;
   font-size: 2.5rem;
   z-index: 800;
 

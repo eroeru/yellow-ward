@@ -41,7 +41,21 @@ const AboutScreen = styled.div`
 // Todo: check rem conversions.
 const AboutText = styled.div`
   padding-left: 10rem;
+  padding-right: 10rem;
+  @media (max-width: 1152px) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  @media (max-width: 740px) {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+  @media (max-width: 480px) {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
   padding-top: 2rem;
+  padding-bottom: 3.7rem;
   font-family: Roboto Mono;
   font-weight: normal;
   font-size: 1.188rem;
@@ -58,7 +72,7 @@ const ProfileContainer = styled.div`
     flex-direction: column;
     align-items: center;
   }
-  background: #F7E03366;
-  ;
+  padding-top: 4.75rem;
+  background: #f7e03366;
 `;
 export default About;
