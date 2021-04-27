@@ -5,7 +5,7 @@ import { colors } from "../styles/colors";
 const Profile = (props) => (
   <FlexContainer>
     <ProfileImg src={props.profilePic} />
-    <ProfileNameText> {props.profileName} </ProfileNameText>
+    <ProfileNameText>{props.profileName}</ProfileNameText>
   </FlexContainer>
 );
 
@@ -15,6 +15,7 @@ const FlexContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding-bottom: 4rem;
 `;
 
 const ProfileImg = styled.img`
@@ -26,7 +27,7 @@ const ProfileImg = styled.img`
 `;
 
 const ProfileNameText = styled.div`
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   font-family: Roboto Mono;
   font-weight: normal;
   font-size: 1.188rem;
@@ -34,6 +35,9 @@ const ProfileNameText = styled.div`
   line-height: 1.5rem;
   letter-spacing: 0em;
   max-width: 100%;
+  @media (max-width: 740px) {
+    width: 345px;
+  }
 `;
 
 export default Profile;

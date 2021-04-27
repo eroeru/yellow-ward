@@ -8,33 +8,7 @@ import profilePicF1 from "../assets/profile_pic_f1.svg";
 import FlexScreen from "./layouts/FlexScreen";
 import Header from "./subcomponents/Header";
 
-// TODO: This should be in a separate file as a reusable hook
-function getDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-}
-
-function useWindowDimensions() {
-  const [windowDimensions, setWindowDimensions] = useState(getDimensions());
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getDimensions());
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return windowDimensions;
-}
-
 const About = () => {
-  const { width, height } = useWindowDimensions();
-
   const aboutText =
     "We design and build unique website and apps for your company, \
     so you dont’t have to. Our principles are to create a simple \
@@ -43,8 +17,8 @@ const About = () => {
   return (
     <AboutScreen>
       <Header relative headerText={"about us"} />
-      <AboutText secondary> {aboutText} {width} </AboutText>
-      <ProfileContainer screenWidth={width}>
+      <AboutText secondary>{aboutText}</AboutText>
+      <ProfileContainer>
         <Profile profilePic={profilePicM1} profileName={"Eero"} />
         <Profile profilePic={profilePicM2} profileName={"Mark"} />
         <Profile profilePic={profilePicF1} profileName={"Zsófi"} />
@@ -58,8 +32,8 @@ const About = () => {
 }
 
 const AboutScreen = styled.div`
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   font-size: 4rem;
   width: 100vw;
 `;
@@ -79,7 +53,12 @@ const AboutText = styled.div`
 const ProfileContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  flex-direction: ${width => width <= 740 ? 'column' : 'row'};
+  flex-direction: row;
+  @media (max-width: 740px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  background: #F7E03366;
+  ;
 `;
-
 export default About;
