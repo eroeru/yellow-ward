@@ -10,7 +10,7 @@ import Header from "./subcomponents/Header";
 
 const About = () => {
   const aboutText =
-    "We design and build unique website and apps for your company, \
+    "We dessign and build unique website and apps for your company, \
     so you dont’t have to. Our principles are to create a simple \
     but unique experience for you and for your users.";
 
