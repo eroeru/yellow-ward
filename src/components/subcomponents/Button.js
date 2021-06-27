@@ -1,6 +1,10 @@
 import styled, { css } from "styled-components";
 import { colors } from "../styles/colors";
 
+export const buttonClick = function() {
+  console.log("adadawa");
+}
+
 export default styled.button`
   margin: 1rem;
   border: 1px solid transparent;

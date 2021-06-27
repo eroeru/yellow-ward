@@ -9,12 +9,14 @@ import About from "./About";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import React from "react";
+import ReactDom from "react-dom";
+import { buttonClick } from "./subcomponents/Events";
 
 const App = () => {
   const naviLeft = <Logo />;
   const naviRight = (
     <div>
-      <Button> services </Button>
+      <Button as="button" onClick={buttonClick}> services </Button>
       <Button> portfolio </Button>
       <Button> about us </Button>
       <Button> contact </Button>
