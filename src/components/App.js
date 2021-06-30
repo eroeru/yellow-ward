@@ -13,16 +13,15 @@ import ReactDom from "react-dom";
 
 
 function App() {
-  const serviceRef = React.useRef();
+  const serviceRef = React.createRef();
 
   function scrollToLocation(reference) {
-    console.log(reference);
     let height = checkLocation(reference);
-    window.scrollTo(0, height + document.documentElement.clientHeight / 4);    
+    window.scrollTo(0, height + document.documentElement.clientHeight / 4);  
   }
 
-  function checkLocation(refLocaton) {
-    return refLocaton.current.serviceSreen.current.getBoundingClientRect().height;
+  function checkLocation(refLocation) {
+    return refLocation.current.getBoundingClientRect().height;
   }
  
   const naviLeft = <Logo />;
