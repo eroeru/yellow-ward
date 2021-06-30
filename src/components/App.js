@@ -14,23 +14,30 @@ import ReactDom from "react-dom";
 
 function App() {
   const serviceRef = React.createRef();
+  const portfolioRef = React.createRef();
+  const aboutUsRef = React.createRef();
+  const contactUsRef =  React.createRef();
 
   function scrollToLocation(reference) {
-    let height = checkLocation(reference);
-    window.scrollTo(0, height + document.documentElement.clientHeight / 4);  
-  }
-
-  function checkLocation(refLocation) {
-    return refLocation.current.getBoundingClientRect().height;
+    let objectHeight = reference.current.getBoundingClientRect().height;
+    let objectTop = reference.current.getBoundingClientRect().top + window.pageYOffset;
+    let middle = (objectTop) - (window.innerHeight / 4);
+    /*
+    console.log(objectHeight);
+    console.log(objectTop);
+    console.log(middle);
+    console.log(window.innerHeight + "\n");
+    */
+    window.scrollTo(0, middle);  
   }
  
   const naviLeft = <Logo />;
   const naviRight = (
     <div>
       <Button as="button" onClick={() => scrollToLocation(serviceRef)}> services </Button>
-      <Button> portfolio </Button>
-      <Button> about us </Button>
-      <Button> contact </Button>
+      <Button as="button" onClick={() => scrollToLocation(portfolioRef)}> portfolio </Button>
+      <Button as="button" onClick={() => scrollToLocation(aboutUsRef)}> about us </Button>
+      <Button as="button" onClick={() => scrollToLocation(contactUsRef)}> contact </Button>
     </div>
   );
   return (
@@ -38,11 +45,11 @@ function App() {
       <Navbar left={naviLeft} right={naviRight} />
       <Hero />
       <Services ref={serviceRef}/>
-      <Portfolio />
+      <Portfolio ref={portfolioRef}/>
       <Clients />
-      <About />
+      <About ref={aboutUsRef}/>
       <Testimonials />
-      <Contact />
+      <Contact ref={contactUsRef}/>
     </React.Fragment>
   );
 }

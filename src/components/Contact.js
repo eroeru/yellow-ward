@@ -5,11 +5,9 @@ import Header from "./subcomponents/Header";
 import Button from "./subcomponents/Button";
 import { colors } from "./styles/colors";
 
-const Contact = () => {
-  const hireText = "<send your project>";
-
-  return (
-    <Container>
+const hireText = "<send your project>";
+const Contact = React.forwardRef((props, ref) => (
+    <Container ref={ref}>
       <Header headerText={"contact us"} secondary />
       <ContactCenter>
         <ul>Would you like to work with us?</ul>
@@ -22,8 +20,7 @@ const Contact = () => {
         <AddressBar>Tallinn</AddressBar>
       </ContactCenter>
     </Container>
-  );
-};
+));
 
 const Container = styled(FlexScreen)`
   background: ${colors.primary_grey};

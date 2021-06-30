@@ -8,14 +8,13 @@ import profilePicF1 from "../assets/profile_pic_f1.svg";
 import FlexScreen from "./layouts/FlexScreen";
 import Header from "./subcomponents/Header";
 
-const About = () => {
-  const aboutText =
-    "We design and build unique website and apps for your company, \
-    so you dont’t have to. Our principles are to create a simple \
-    but unique experience for you and for your users.";
+const aboutText =
+"We design and build unique website and apps for your company, \
+so you dont’t have to. Our principles are to create a simple \
+but unique experience for you and for your users.";
 
-  return (
-    <AboutScreen>
+const About = React.forwardRef((props, ref) => (
+    <AboutScreen ref={ref}>
       <Header relative headerText={"about us"} />
       <AboutText secondary>{aboutText}</AboutText>
       <ProfileContainer>
@@ -24,8 +23,7 @@ const About = () => {
         <Profile profilePic={profilePicF1} profileName={"Zsófi"} />
       </ProfileContainer>
     </AboutScreen>
-  );
-};
+  ));
 
 {
   /* A commenty comment */

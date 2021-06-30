@@ -10,22 +10,20 @@ import "swiper/swiper.scss";
 
 SwiperCore.use([Navigation, Pagination]);
 
-const Portfolio = () => {
-  const headerText = "portfolio";
-  return (
-    <FlexScreen>
-      <Header headerText={headerText} />
-      <Swiper loop navigation pagination={{ clickable: true }}>
-        <SwiperSlide>
-          <FirstWork />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SecondWork />
-        </SwiperSlide>
-      </Swiper>
-    </FlexScreen>
-  );
-};
+const headerText = "portfolio";
+const Portfolio = React.forwardRef((props, ref) => (
+  <FlexScreen ref={ref}>
+  <Header headerText={headerText} />
+  <Swiper loop navigation pagination={{ clickable: true }}>
+    <SwiperSlide>
+      <FirstWork />
+    </SwiperSlide>
+    <SwiperSlide>
+      <SecondWork />
+    </SwiperSlide>
+  </Swiper>
+</FlexScreen>
+));
 
 const FirstWork = styled(FlexScreen)`
   background-image: url(${PortfolioPic});
