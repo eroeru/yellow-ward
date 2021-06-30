@@ -10,13 +10,25 @@ import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import React from "react";
 import ReactDom from "react-dom";
-import { buttonClick } from "./subcomponents/Events";
 
-const App = () => {
+
+function App() {
+  const serviceRef = React.useRef();
+
+  function scrollToLocation(reference) {
+    console.log(reference);
+    let height = checkLocation(reference);
+    window.scrollTo(0, height + document.documentElement.clientHeight / 4);    
+  }
+
+  function checkLocation(refLocaton) {
+    return refLocaton.current.serviceSreen.current.getBoundingClientRect().height;
+  }
+ 
   const naviLeft = <Logo />;
   const naviRight = (
     <div>
-      <Button as="button" onClick={buttonClick}> services </Button>
+      <Button as="button" onClick={() => scrollToLocation(serviceRef)}> services </Button>
       <Button> portfolio </Button>
       <Button> about us </Button>
       <Button> contact </Button>
@@ -26,7 +38,7 @@ const App = () => {
     <React.Fragment>
       <Navbar left={naviLeft} right={naviRight} />
       <Hero />
-      <Services />
+      <Services ref={serviceRef}/>
       <Portfolio />
       <Clients />
       <About />
@@ -34,6 +46,6 @@ const App = () => {
       <Contact />
     </React.Fragment>
   );
-};
+}
 
 export default App;

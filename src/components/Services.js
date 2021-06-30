@@ -5,22 +5,30 @@ import { colors } from "./styles/colors";
 import Card from "./subcomponents/Card";
 import Header from "./subcomponents/Header";
 
-const Services = () => {
-  const firstCardData = { upper: "image1", middle: "title1", lower: "a, b, c" };
-  const secondCardData = { upper: "image2", middle: "title2", lower: "a, b, c" };
-  const thirdCardData = { upper: "image3", middle: "title3", lower: ["a", "b", "c"] };
 
-  return (
-    <ServicesScreen>
-      <Header headerText={"services"} />
-      <Container>
-        <Card cardData={firstCardData} />
-        <Card cardData={secondCardData} />
-        <Card cardData={thirdCardData} />
-      </Container>
-    </ServicesScreen>
-  );
-};
+class Services extends React.Component {
+  constructor(props) {
+    super(props);
+    this.serviceSreen = React.createRef();
+  }
+
+
+  render() {
+    const firstCardData = { upper: "image1", middle: "title1", lower: "a, b, c" };
+    const secondCardData = { upper: "image2", middle: "title2", lower: "a, b, c" };
+    const thirdCardData = { upper: "image3", middle: "title3", lower: ["a", "b", "c"] };
+    return (
+      <ServicesScreen ref={this.serviceSreen}>
+        <Header headerText={"services"} />
+        <Container >
+          <Card cardData={firstCardData} />
+          <Card cardData={secondCardData} />
+          <Card cardData={thirdCardData} />
+        </Container>
+      </ServicesScreen>
+    );
+  }
+}
 
 const ServicesScreen = styled(FlexScreen)`
   width: 100vw;

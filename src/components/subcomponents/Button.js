@@ -1,11 +1,7 @@
 import styled, { css } from "styled-components";
 import { colors } from "../styles/colors";
 
-export const buttonClick = function() {
-  console.log("adadawa");
-}
-
-export default styled.button`
+const Button = styled.button`
   margin: 1rem;
   border: 1px solid transparent;
   outline: none;
@@ -44,3 +40,5 @@ export default styled.button`
       border-color: linear-gradiant(to bottom, ${colors.primary_yellow} 0%, ${colors.primary_gray} 49%, rgba(41, 52, 61, .8) 50%,rgba(41, 52, 61, .8) 100%);
     `}
 `;
+
+export default Button;
