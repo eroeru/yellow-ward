@@ -19,7 +19,6 @@ function App() {
   const contactUsRef =  React.createRef();
 
   function scrollToLocation(reference) {
-    let objectHeight = reference.current.getBoundingClientRect().height;
     let objectTop = reference.current.getBoundingClientRect().top + window.pageYOffset;
     let middle = (objectTop) - (window.innerHeight / 4);
     window.scrollTo(0, middle);  

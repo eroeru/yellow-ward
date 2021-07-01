@@ -9,12 +9,11 @@ import Header from "./subcomponents/Header";
 const firstCardData = { upper: "image1", middle: "title1", lower: "a, b, c" };
 const secondCardData = { upper: "image2", middle: "title2", lower: "a, b, c" };
 const thirdCardData = { upper: "image3", middle: "title3", lower: ["a", "b", "c"] };
-const bewRef = React.createref();
 
 const Services = React.forwardRef((props, ref) => (
       <ServicesScreen ref={ref}>
         <Header headerText={"services"} />
-        <Container ref={bewRef}>
+        <Container >
           <Card cardData={firstCardData} />
           <Card cardData={secondCardData} />
           <Card cardData={thirdCardData} />
