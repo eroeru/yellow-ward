@@ -22,12 +22,6 @@ function App() {
     let objectHeight = reference.current.getBoundingClientRect().height;
     let objectTop = reference.current.getBoundingClientRect().top + window.pageYOffset;
     let middle = (objectTop) - (window.innerHeight / 4);
-    /*
-    console.log(objectHeight);
-    console.log(objectTop);
-    console.log(middle);
-    console.log(window.innerHeight + "\n");
-    */
     window.scrollTo(0, middle);  
   }
  
