@@ -12,16 +12,16 @@ const Contact = React.forwardRef((props, ref) => (
       <ContactCenter>
         <ul>Would you like to work with us?</ul>
         <ul>Fill the form below, and tell us about your project.</ul>
-        <form>
+        <form action="/magic" method="post">
           <div>
             <input type="text" placeholder="your name"/>
             <input type="email"placeholder="your e-mail address"/>  
           </div>        
           <div>
             <input type="tel" placeholder="your phone number"/>
-            <input type="textbox" placeholder="a few words about your project"/>
+            <input type="textarea" placeholder="a few words about your project"/>
           </div>
-          <Button as="input" type="submit" value={hireText} primary></Button>
+          <Button as="button" type="submit" primary>{hireText}</Button>
         </form>
         <AddressBar>Tallinn</AddressBar>
       </ContactCenter>
