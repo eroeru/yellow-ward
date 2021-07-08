@@ -12,11 +12,17 @@ const Contact = React.forwardRef((props, ref) => (
       <ContactCenter>
         <ul>Would you like to work with us?</ul>
         <ul>Fill the form below, and tell us about your project.</ul>
-        <input></input>
-        <input></input>
-        <input></input>
-        <input></input>
-        <Button primary>{hireText}</Button>
+        <form action="http://localhost:4000/submit" method="post">
+          <div>
+            <input type="text" placeholder="your name" name="name"/>
+            <input type="email"placeholder="your e-mail address" name="email"/>  
+          </div>        
+          <div>
+            <input type="tel" placeholder="your phone number" name="phone"/>
+            <input type="textarea" placeholder="a few words about your project" name="description"/>
+          </div>
+          <Button as="button" type="submit" primary>{hireText}</Button>
+        </form>
         <AddressBar>Tallinn</AddressBar>
       </ContactCenter>
     </Container>
