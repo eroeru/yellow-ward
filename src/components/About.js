@@ -21,6 +21,7 @@ const About = React.forwardRef((props, ref) => (
         <Profile profilePic={profilePicM1} profileName={"Eero"} />
         <Profile profilePic={profilePicM2} profileName={"Mark"} />
         <Profile profilePic={profilePicF1} profileName={"Zsófi"} />
+        <Profile profilePic={profilePicM1} profileName={"Norman"} />
       </ProfileContainer>
     </AboutScreen>
   ));
