@@ -4,10 +4,14 @@ import { colors } from "../styles/colors";
 
 const Profile = (props) => (
   <FlexContainer>
-    <ProfileImg src={props.profilePic} />
-    <ProfileNameText>{props.profileName}</ProfileNameText>
+    <ProfileImg onClick={() => profileClickAction(props.profileName)} src={props.profilePic}/>
+    <ProfileNameText onClick={() => profileClickAction(props.profileName)}>{props.profileName}</ProfileNameText>
   </FlexContainer>
 );
+
+function profileClickAction(name) {
+  console.log(`Yo ${name}`)
+}
 
 const FlexContainer = styled.div`
   display: flex;
