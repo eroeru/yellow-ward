@@ -2,11 +2,17 @@ import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { colors } from "./styles/colors";
 import Profile from "./subcomponents/Profile";
+import ProfileModel from "../models/ProfileModel";
 import profilePicM1 from "../assets/profile_pic_m1.svg";
 import profilePicM2 from "../assets/profile_pic_m2.svg";
 import profilePicF1 from "../assets/profile_pic_f1.svg";
 import FlexScreen from "./layouts/FlexScreen";
 import Header from "./subcomponents/Header";
+
+const eero = new ProfileModel("Eero", profilePicM1, "I'm a tough coder! Punch you in da face.");
+const mark = new ProfileModel("Mark", profilePicM2, "I'm a tough coder! Punch you in da face.");
+const zsofi = new ProfileModel("Zsófi", profilePicF1, "I'm a tough coder! Punch you in da face.");
+const norman = new ProfileModel("Norman", profilePicM1, "I'm a tough coder! Punch you in da face.");
 
 const aboutText =
 "We design and build unique website and apps for your company, \
@@ -18,10 +24,10 @@ const About = React.forwardRef((props, ref) => (
       <Header relative headerText={"about us"} />
       <AboutText secondary>{aboutText}</AboutText>
       <ProfileContainer>
-        <Profile profilePic={profilePicM1} profileName={"Eero"} />
-        <Profile profilePic={profilePicM2} profileName={"Mark"} />
-        <Profile profilePic={profilePicF1} profileName={"Zsófi"} />
-        <Profile profilePic={profilePicM1} profileName={"Norman"} />
+        <Profile profilePic={eero.pic} profileName={eero.name} />
+        <Profile profilePic={mark.pic} profileName={mark.name} />
+        <Profile profilePic={zsofi.pic} profileName={zsofi.name} />
+        <Profile profilePic={norman.pic} profileName={norman.name} />
       </ProfileContainer>
     </AboutScreen>
   ));
