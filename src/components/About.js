@@ -65,6 +65,7 @@ const AboutText = styled.div`
 
 const ProfileContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
   @media (max-width: 740px) {
