@@ -20,6 +20,11 @@ const FlexContainer = styled.div`
 
 const ProfileImg = styled.img`
   width: 345px;
+  background-color: #c8ad7f;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 20px; 
+  border-color: #c8ad7f;
   min-width: 230px;
   max-width: 100%;
   min-height: 60%;
