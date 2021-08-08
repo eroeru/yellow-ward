@@ -21,7 +21,7 @@ function App() {
   function scrollToLocation(reference) {
     let objectTop = reference.current.getBoundingClientRect().top + window.pageYOffset;
     let middle = (objectTop) - (window.innerHeight / 4);
-    window.scrollTo(0, middle);  
+    window.scrollTo(0, objectTop);  
   }
  
   const naviLeft = <Logo />;
