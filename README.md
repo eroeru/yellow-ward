@@ -1,8 +1,8 @@
 typical create-react-app:
-just navigate to the project folder and type "npm start" in console
+just navigate to the project folder and type **"npm start"** in console
 
 oh, and you need to:
-npm install express
+**npm install express**
 
 # Basic create-react-app stuff:
 
