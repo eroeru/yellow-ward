@@ -1,7 +1,10 @@
-typical create-react-app stuff:
-just navigate to the project folder and type "npm start" in console
+typical create-react-app:
+just navigate to the project folder and type **"npm start"** in console
 
-# Basic create-react-app stuff left in just-in-case
+oh, and you need to:
+**npm install express**
+
+# Basic create-react-app stuff:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
